@@ -1,7 +1,14 @@
-class Negociacao {
-  constructor() {
-    this.data = new Date();
-    this.quantidade;
-    this.valor = 0.0;
+class Negociacao { 
+
+  //Definindo parametros que devem ser passados na instancia
+  constructor(data, quantidade, valor) {
+    this.data = data
+    this.quantidade = quantidade
+    this.valor = valor
+  }
+
+  //Adicionando método
+  calculaVolume () {
+    return this.quantidade * this.valor 
   }
 }
