@@ -6,6 +6,8 @@ class Negociacao {
     this._data = data
     this._quantidade = quantidade
     this._valor = valor
+    //Adicionando Objetct.freeze para evitar que seus atributos sejam alterados
+    Object.freeze(this)
   }
   /*
     //Adicionando método
@@ -26,7 +28,7 @@ class Negociacao {
       return this._valor
     } */
 
-  // Adicionando getter para criar métodos somente de leitura
+  // Adicionando getter para criar métodos somente de leitura 
   get volume() {
     return this.quantidade * this.valor
   }
