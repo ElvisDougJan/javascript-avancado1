@@ -1,27 +1,46 @@
-class Negociacao { 
+class Negociacao {
 
   //Definindo parametros que devem ser passados na instancia
   constructor(data, quantidade, valor) {
+    //convencionando que esses atributos são privados
     this._data = data
     this._quantidade = quantidade
     this._valor = valor
   }
+  /*
+    //Adicionando método
+    getVolume () {
+      return this.quantidade * this.valor 
+    }
+  
+    //Adicionando métodos de acesso para impedir acesso direto dos atributos com _ (underline)
+    getData() {
+      return this._data
+    }
+  
+    getQuantidade () {
+      return this._quantidade
+    }
+  
+    getValor() {
+      return this._valor
+    } */
 
-  //Adicionando método
-  getVolume () {
-    return this.quantidade * this.valor 
+  // Adicionando getter para criar métodos somente de leitura
+  get volume() {
+    return this.quantidade * this.valor
   }
 
-  //Adicionando métodos de acesso para impedir acesso direto dos atributos com _ (underline)
-  getData() {
+  get data() {
     return this._data
   }
 
-  getQuantidade () {
+  get quantidade() {
     return this._quantidade
   }
 
-  getValor() {
+  get valor() {
     return this._valor
   }
+
 }
