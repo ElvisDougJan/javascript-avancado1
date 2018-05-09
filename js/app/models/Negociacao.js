@@ -8,7 +8,7 @@ class Negociacao {
   }
 
   //Adicionando método
-  calculaVolume () {
+  getVolume () {
     return this.quantidade * this.valor 
   }
 
