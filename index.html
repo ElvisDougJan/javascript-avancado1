@@ -63,17 +63,16 @@
 
 	<script src="js/app/models/Negociacao.js"></script>
 	<script>
-		var n1 = new Negociacao(new Date(), 22, 15.5);
-
-		var amanha = new Date();
-		amanha.setDate(9)
-
-		n1._data = amanha
+		let hoje = new Date();
+		let n1 = new Negociacao(hoje, 22, 15.5);
+		
 		console.log(n1.data)
+	
+		hoje.setDate(9)
 
-		n1.data.setDate(9)
 		console.log(n1.data)
-		</script>
+	
+	</script>
 </body>
 
 </html>
